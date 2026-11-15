@@ -30,7 +30,8 @@ async def main(request: Request):
                     "role": "user",
                     "content": user_text
                 }
-            ]
+            ],
+            "stream": False
         },
     )
     answer = response.json()["choices"][0]["message"]["content"]
