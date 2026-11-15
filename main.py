@@ -17,7 +17,7 @@ async def main(request: Request):
         headers={"Authorization": f"Bearer {DEEPSEEK_API_KEY}"},
           json={
             "model": "deepseek-flash",
-            "thinking": {"type": "enabled"},
+            "thinking": {"type": "disabled"},
             "tools": [
                 {"type": "deepseek_web_search", "name": "deepseek_web_search", "strict": true}
             ],
