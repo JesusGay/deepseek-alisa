@@ -15,11 +15,11 @@ async def main(request: Request):
     response = requests.post(
         DEEPSEEK_API_URL,
         headers={"Authorization": f"Bearer {DEEPSEEK_API_KEY}"},
-         json={
+          json={
             "model": "deepseek-flash",
             "thinking": {"type": "enabled"},
             "tools": [
-                {"type": "deepseek_web_search", "name": "deepseek_web_search"}
+                {"type": "deepseek_web_search", "name": "deepseek_web_search", "strict": true}
             ],
             "messages": [
                 {
